@@ -4,9 +4,8 @@
   padding: 0;
   text-align: justify; }
 
-.container {
+.contenedor {
   width: 100%;
-  max-width: 1200px;
   margin: 0 auto; }
 
 .row::before, .row::after {
@@ -25,6 +24,7 @@
   background: #f7b617; }
   .barra h1 {
     padding: 1em;
+    font-size: 2em;
     text-align: center; }
 
 .menuBarra ul {
@@ -34,6 +34,7 @@
     margin: 1em;
     text-align: center;
     color: #fff;
+    padding: 0.5em;
     text-decoration: none;
     background: #2b2b2b; }
 
@@ -51,8 +52,54 @@
   width: 24.999%;
   float: left;
   margin: 1em;
-  padding: 2em;
+  padding: 1em;
   background: #2b2b2b;
   color: #fff; }
+
+.piePagina {
+  background: #2b2b2b;
+  color: #fff;
+  font-size: 1em;
+  padding: 1em; }
+  .piePagina h1 {
+    text-align: center; }
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .contenedor {
+    width: 100%;
+    margin: 0 auto; }
+
+  .barra {
+    background: #f7b617; }
+    .barra h1 {
+      padding: 0.5em;
+      font-size: 1em;
+      text-align: center; }
+
+  .menuBarra ul {
+    width: 99.996%;
+    float: left; }
+    .menuBarra ul li {
+      margin: 1em;
+      text-align: center;
+      color: #fff;
+      padding: 0.5em;
+      text-decoration: none;
+      background: #2b2b2b; }
+
+  .columnaEjercicio {
+    width: 91.663%;
+    float: left;
+    margin: 1em; }
+
+  .instrucciones {
+    width: 91.663%;
+    float: left;
+    padding: 1em;
+    color: #fff; }
+    .instrucciones h2 {
+      text-align: center; }
+    .instrucciones p {
+      text-align: center; } }
 
 /*# sourceMappingURL=style.css.map */

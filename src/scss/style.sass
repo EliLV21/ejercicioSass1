@@ -1,0 +1,125 @@
+$labYellow: rgb(247, 182, 23)
+$labGray: rgb(43, 43, 43)
+$colBase: 8.333%
+$blanco: #fff
+$min-height: 8px
+$unEm: 1em
+$dosEm: 2em
+$mediaEm: 0.5em
+$fila: 8.333 * 12
+$alinearCentro: center
+
+=grid($columns)
+  width: $colBase * $columns
+  float: left
+
+*
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+  text-align: justify
+
+.contenedor
+  width: 100%
+  margin: 0 auto
+
+.row::before, .row::after
+  content: " "
+  display: table
+
+.row::after
+  clear: both
+
+[class*="col-"]
+  min-height: 8px
+  padding: 12px
+  float: left
+
+.barra
+  background: $labYellow
+
+  h1
+    padding: $unEm
+    font-size: $dosEm
+    text-align: $alinearCentro
+
+.menuBarra
+  ul
+    +grid(2)
+
+    li
+      margin: $unEm
+      text-align: $alinearCentro
+      color: $blanco
+      padding: $mediaEm
+      text-decoration: none
+      background: $labGray
+
+.listaMenu
+  background-color: $labGray
+  color: $blanco
+  margin: $unEm
+
+.columnaEjercicio
+  +grid(6)
+
+  margin: $unEm
+
+.instrucciones
+  +grid(3)
+
+  margin: $unEm
+  padding: $unEm
+  background: $labGray
+  color: $blanco
+
+.piePagina
+  background: $labGray
+  color: $blanco
+  font-size: $unEm
+  padding: $unEm
+
+  h1
+    text-align: $alinearCentro
+
+@media screen and (min-width: 320px) and (max-width: 480px)
+  .contenedor
+    width: 100%
+    margin: 0 auto
+
+  .barra
+    background: $labYellow
+
+    h1
+      padding: $mediaEm
+      font-size: $unEm
+      text-align: $alinearCentro
+
+  .menuBarra
+    ul
+      +grid(12)
+
+      li
+        margin: $unEm
+        text-align: $alinearCentro
+        color: $blanco
+        padding: $mediaEm
+        text-decoration: none
+        background: $labGray
+
+  .columnaEjercicio
+    +grid(11)
+
+    margin: $unEm
+
+  .instrucciones
+    +grid(11)
+
+    padding: $unEm
+    color: $blanco
+
+    h2
+      text-align: $alinearCentro
+
+    p
+      text-align: $alinearCentro

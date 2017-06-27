@@ -5,7 +5,6 @@ var api = {
 
 var crearElementos = function(datosAlumna){
   var $alumna=$('<li class="alumna"/>').text( " "+ datosAlumna.name + " " + datosAlumna.pLastName + " " + datosAlumna.mLastName);
-	console.log(datosAlumna.name)
   var $checkbox = $('<input type="checkbox" class="alumnaCheck"/>');
   $alumna.prepend($checkbox);
   var $label = $('<li/>').append($alumna);

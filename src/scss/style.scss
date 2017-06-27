@@ -5,6 +5,7 @@ $blanco: #fff;
 $min-height: 8px;
 $unEm: 1em;
 $dosEm: 2em;
+$mediaEm: .5em;
 $fila: 8.333 * 12;
 $alinearCentro: center;
 
@@ -19,9 +20,8 @@ $alinearCentro: center;
   padding: 0;
   text-align: justify;
 }
-.container {
+.contenedor {
   width: 100%;
-  max-width: 1200px;
   margin: 0 auto;
 }
 .row::before, .row::after {
@@ -40,6 +40,7 @@ $alinearCentro: center;
 	background: $labYellow;
 	h1{
 		padding: $unEm;
+		font-size: $dosEm;
 		text-align: $alinearCentro;
 	}
 }
@@ -50,12 +51,11 @@ $alinearCentro: center;
 			margin: $unEm;
 			text-align: $alinearCentro;
 			color: $blanco;
+			padding: $mediaEm;
 			text-decoration: none;
 			background: $labGray;
 		}
 	}
-
-
 }
 .listaMenu{
 	background-color: $labGray;
@@ -69,7 +69,61 @@ $alinearCentro: center;
 .instrucciones{
 	@include grid (3);
 	margin: $unEm;
-	padding: $dosEm;
+	padding: $unEm;
 	background: $labGray;
 	color: $blanco;
+}
+.piePagina{
+	background: $labGray;
+	color: $blanco;
+	font-size: $unEm;
+	padding: $unEm;
+	h1{
+		text-align: $alinearCentro;
+	}
+}
+@media screen and (min-width:320px) and (max-width:480px) {
+	.contenedor {
+	  width: 100%;
+	  margin: 0 auto;
+	}
+	.barra{
+		background: $labYellow;
+		h1{
+			padding: $mediaEm;
+			font-size: $unEm;
+			text-align: $alinearCentro;
+		}
+	}
+	.menuBarra{
+		ul{
+			@include grid (12);
+			li{
+				margin: $unEm;
+				text-align: $alinearCentro;
+				color: $blanco;
+				padding: $mediaEm;
+				text-decoration: none;
+				background: $labGray;
+			}
+		}
+	}
+	.columnaEjercicio{
+		@include grid (11);
+		margin: $unEm;
+	}
+	.instrucciones{
+		@include grid (11);
+		padding: $unEm;
+		color: $blanco;
+		h2{
+			text-align: $alinearCentro;
+		}
+		p{
+			text-align: $alinearCentro;
+		}
+	}
+
+
+
 }
