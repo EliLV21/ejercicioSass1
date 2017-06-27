@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-align: justify; }
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto; }
+
+.row::before, .row::after {
+  content: " ";
+  display: table; }
+
+.row::after {
+  clear: both; }
+
+[class*="col-"] {
+  min-height: 8px;
+  padding: 12px;
+  float: left; }
+
+.barra {
+  background: #f7b617; }
+  .barra h1 {
+    padding: 1em;
+    text-align: center; }
+
+.menuBarra ul {
+  width: 16.666%;
+  float: left; }
+  .menuBarra ul li {
+    margin: 1em;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    background: #2b2b2b; }
+
+.listaMenu {
+  background-color: #2b2b2b;
+  color: #fff;
+  margin: 1em; }
+
+.columnaEjercicio {
+  width: 49.998%;
+  float: left;
+  margin: 1em; }
+
+.instrucciones {
+  width: 24.999%;
+  float: left;
+  margin: 1em;
+  padding: 2em;
+  background: #2b2b2b;
+  color: #fff; }
+
+/*# sourceMappingURL=style.css.map */

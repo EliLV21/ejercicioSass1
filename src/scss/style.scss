@@ -1,0 +1,75 @@
+$labYellow: rgb(247, 182, 23);
+$labGray: rgb(43, 43, 43);
+$colBase: 8.333%;
+$blanco: #fff;
+$min-height: 8px;
+$unEm: 1em;
+$dosEm: 2em;
+$fila: 8.333 * 12;
+$alinearCentro: center;
+
+@mixin grid ($columns) {
+	width: $colBase * ($columns);
+	float: left;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-align: justify;
+}
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.row::before, .row::after {
+  content: " ";
+  display: table;
+}
+.row::after {
+  clear: both;
+}
+[class*="col-"] {
+  min-height: 8px;
+  padding: 12px;
+  float: left;
+}
+.barra{
+	background: $labYellow;
+	h1{
+		padding: $unEm;
+		text-align: $alinearCentro;
+	}
+}
+.menuBarra{
+	ul{
+		@include grid (2);
+		li{
+			margin: $unEm;
+			text-align: $alinearCentro;
+			color: $blanco;
+			text-decoration: none;
+			background: $labGray;
+		}
+	}
+
+
+}
+.listaMenu{
+	background-color: $labGray;
+	color: $blanco;
+	margin: $unEm;
+}
+.columnaEjercicio{
+	@include grid (6);
+	margin: $unEm;
+}
+.instrucciones{
+	@include grid (3);
+	margin: $unEm;
+	padding: $dosEm;
+	background: $labGray;
+	color: $blanco;
+}
